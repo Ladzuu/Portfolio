@@ -3,8 +3,21 @@
 
 :root {
     // Colors
-    --background-color: gradient(
-        var(--color-background-start),
-        var(--color-background-end)
-    );
+    --background-color-top: #1E1E1E;
+    --background-color-bottom: #2A2750;
+    --primary-color: #F2F2F2;
+    --secondary-color: #F3CB5C;
+    --background-menu: #2A2750;
+
+    // Fonts
+    --h1-home: 'Boska', serif;
+    --h1-cs: 'Clash Display', sans-serif;
+    --title-section: 'Outfit', sans-serif;
+    --text: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
+    color: var(--primary-color);
 }

@@ -18,28 +18,127 @@
 
     <!-- HEADER -->
 
-    <header id="home" class="section section--header">
+    <header class="section section--header">
+
+      <!-- Nav -->
+
       <nav class="nav">
         <img src="assets/images/logo.svg" alt="logo" class="nav__logo">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home">Accueil</a></li>
+          <li class="nav__item"><a href="#">Accueil</a></li>
+          <li class="nav__item"><a href="#">À propos</a></li>
           <li class="nav__item"><a href="#">Projets</a></li>
-          <li class="nav__item"><a href="#">Contact</a></li>
         </ul>
-
       </nav>
+
+      <!-- Setion Header -->
+
+      <section class="section section--header">
+        <div class="header__content">
+          <h1 class="title title--big">Lucas <span class="title title--big__bold">Labiouse</span></h1>
+          <img src="assets/images/star.svg" alt="star">
+          <h2 class="title title--subtile">Web Designer</h2>
+        </div>
+        <div class="page--breakline">
+          <img src="assets/images/star.svg" alt="star">
+          <span class="breakline"></span>
+        </div>
+      </section>
     </header>
 
     <!-- MAIN -->
 
-    <main>
+    <main class="section section--main">
 
+      <!-- Section About -->
+
+      <section class="section section--about">
+        <div class="section--about__content">
+          <h3 class="title title--section">Moi, c'est <span class="text text--highlight">Lucas</span></h2>
+          <p class="text text--big">Je suis étudiant en deuxième année de Design Web & Transmédia à la Haute École Albert-Jacquard à Namur en Belgique.</p>
+          <p class="text text--big">Ce site regroupe les travaux que j’ai pû réaliser tout au long de mon apprentissage en Web Design & Développement.</p>
+          <button class="btn btn--contact">
+            <img src="assets/images/star.svg" alt="star">
+            <a href="https://www.linkedin.com/in/lucas-labiouse-908785251/" target="blank">Me Contacter</a>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section Projects -->
+
+      <section class="section section--projects">
+
+        <!-- Projects Intro -->
+
+        <div class="section--projects__intro">
+          <img src="assets/images/star.svg" alt="star">
+          <h3 class="title title--section">Mes <span class="text text--highlight">projets</span></h2>
+          <p class="text text--big">Voici quelques exemples de projets que j’ai pû réaliser seul ou en groupe durant cette année scolaire. Cliquez sur les cartes afin de voir ce qu’elles renferment.</p>
+        </div>
+
+        <!-- Projects Cards -->
+
+        <div class="section--projects__content">
+
+          <!-- Card Janus -->
+
+          <div class="project">
+            <div class="project--title">
+              <h4 class="title title--card">Janus</h4>
+              <p class="text">2024</p>
+            </div>
+            <p class="text">Site critique du streamer ZeratoR</p>
+            <div class="card">
+              <img src="assets/images/janus@2x.webp" alt="projet_janus">
+            </div>
+          </div>
+
+          <!-- Card DataPlay -->
+
+          <div class="project">
+            <div class="project--title">
+              <h4 class="title title--card">DataPlay</h4>
+              <p class="text">2025</p>
+            </div>
+            <p class="text">Clash entre différents artistes</p>
+            <div class="card">
+              <img src="assets/images/dataplay@2x.webp" alt="projet_dataplay">
+            </div>
+          </div>
+
+          <!-- Card Design Fiction -->
+
+          <div class="project">
+            <div class="project--title">
+              <h4 class="title title--card">Design Fiction</h4>
+              <p class="text">2025</p>
+            </div>
+            <p class="text">Chasse au trésor pour le One Piece</p>
+            <div class="card">
+              <img src="assets/images/designfiction@2x.webp" alt="projet_designfiction">
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="section section--footer">
 
+      <!-- Credits -->
+
+      <div class="page--breakline">
+        <span class="breakline"></span>
+        <img src="assets/images/star.svg" alt="star">
+      </div>
+
+      <div class="credits">
+        <p class="text text--footer">Tous droits réservés</p>
+        <p class="text text--footer">© Lucas Labiouse 2025</p>
+        <p class="text text--footer"><a href="credits.html">Crédits</a></p>
+      </div>
     </footer>
 
   </body>

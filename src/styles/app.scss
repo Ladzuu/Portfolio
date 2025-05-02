@@ -2,5 +2,9 @@
 @import 'components/type';
 
 :root {
-    
+    // Colors
+    --background-color: gradient(
+        var(--color-background-start),
+        var(--color-background-end)
+    );
 }

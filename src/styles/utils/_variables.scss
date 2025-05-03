@@ -12,6 +12,29 @@
     --title-section: 'Outfit', sans-serif;
     --text: 'Poppins', sans-serif;
     
-    // Font sizes
-    
+    /* Font Sizes */
+    // Mobile
+    --h1-size-mb: 4.75rem;
+    --h2-size-mb: 2rem;
+    --h3-size-mb: 1.75rem;
+    --h4-size-mb: 1.75rem;
+    --text-size-big-mb: 1.313rem;
+    --text-size-mb: 1rem;
+
+    // Desktop
+    --h1-size-dt: 11.188rem;
+    --h2-size-dt: 3.563rem;
+    --h3-size-dt: 2.688rem;
+    --h4-size-dt: 2rem;
+    --text-size-big-mb: 1.5rem;
+    --text-size-mb: 1.125rem;
+
+    /* Font Weights */
+    --black-weight: 900;
+    --bold-weight: 700;
+    --regular-weight: 400;
+
+    /* Font Line Heights */
+    --title-line-height: 1.2;
+    --text-line-height: 1.4;
 }

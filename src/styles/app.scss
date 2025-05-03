@@ -1,23 +1,148 @@
 @import 'utils/variables';
 @import 'components/type';
 
-:root {
-    // Colors
-    --background-color-top: #1E1E1E;
-    --background-color-bottom: #2A2750;
-    --primary-color: #F2F2F2;
-    --secondary-color: #F3CB5C;
-    --background-menu: #2A2750;
-
-    // Fonts
-    --h1-home: 'Boska', serif;
-    --h1-cs: 'Clash Display', sans-serif;
-    --title-section: 'Outfit', sans-serif;
-    --text: 'Poppins', sans-serif;
-    
-}
+// Assets
 
 body {
     background-image: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
     color: var(--primary-color);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+// Nav
+
+.menu--btn{
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    z-index: 10;
+    background: transparent;
+    color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu--btn i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.menu--btn i:nth-child(1) {
+    top: 0;
+}
+
+.menu--btn i:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu--btn i:nth-child(3) {
+    bottom: 0;
+}
+
+/* open state */
+.menu--btn.open i:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+    transform-origin: center;
+}
+
+.menu--btn.open i:nth-child(2) {
+    opacity: 0;
+}
+
+.menu--btn.open i:nth-child(3) {
+    bottom: 50%;
+    transform: rotate(-45deg) translateY(50%);
+    transform-origin: center;
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--background-color-top);
+}
+
+.nav__mb {
+    background-color: var(--background-menu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.3s ease-out; 
+    z-index: 1;
+}
+
+
+.nav__mb ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav__list .nav__link {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 51px;
+    line-height: 1.4;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav__link{
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav__item{
+    margin-bottom: 80px;
+}
+
+.nav__item a{
+    text-align: center;
+    font-family: var(--h1-cs);
+}
+
+.img__logo{
+    position: fixed;
+    z-index: 9;
+    width: 30px;
+    height: auto;
+    top: 25px;
+    left: 20px;
+}
+
+/* open state */
+
+.nav__mb.open {
+    top: 0;
+    height: 100%; /* Prend 100% de la hauteur de l'écran lorsqu'il est ouvert */
 }

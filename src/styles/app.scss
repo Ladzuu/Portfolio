@@ -4,10 +4,29 @@
 // Assets
 
 body {
-    background-image: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
+    background: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--primary-color);
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.highlight--gradient {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--background-color-bottom) 100%);
+    filter: blur(50px);
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* NAVIGATION */
@@ -158,8 +177,8 @@ body {
             height: auto;
             position: absolute;
             z-index: -1;
-            top: 330px;
-            right: 120px;
+            top: 35%;
+            right: 30%;
         }
 
         .title--big {

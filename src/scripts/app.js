@@ -39,7 +39,7 @@ menuButton.addEventListener("click", function () {
             {
                 y: "0%",
                 duration: 0.5,
-                ease: "power4.out", // Easing pour une ouverture lente au début
+                ease: "power4.out",
                 onComplete: function () {
                     // Animation des liens
                     gsap.fromTo(
@@ -58,4 +58,58 @@ menuButton.addEventListener("click", function () {
 
         menu.classList.add("open");
     }
+});
+
+
+// HEADER
+
+// Star animation 
+
+const headerImage = document.querySelector(".header__content img");
+
+gsap.fromTo(headerImage, 
+    {
+        opacity: 0,
+        scale: 0,
+        rotation: 0,
+    },
+    {
+        opacity: 1,
+        scale: 1,
+        rotation: 360,
+        duration: 1,
+        ease: "power2.inOut",
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 1.15,
+    }
+    
+);
+
+// Titles animation
+
+const headerTitles = document.querySelectorAll(".header__content .title");
+
+gsap.from(headerTitles, {
+    opacity: 0,
+    x: 20,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power4.out",
+    yoyo: true,
+    repeat: -1,
+    repeatDelay: 0.5,
+});
+
+// Breakline animation
+
+const headerBreakline = document.querySelectorAll(".page--breakline");
+
+gsap.from(headerBreakline, {
+    delay: 1,
+    opacity: 0,
+    x: 80,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power4.out",
 });

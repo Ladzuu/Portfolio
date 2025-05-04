@@ -26,7 +26,7 @@ menuButton.addEventListener("click", function () {
                 gsap.to(menu, {
                     y: "-100%",
                     duration: 0.5,
-                    ease: "power4.in",
+                    ease: "power2.in",
                 });
                 menu.classList.remove("open");
             },
@@ -77,11 +77,11 @@ gsap.fromTo(headerImage,
         opacity: 1,
         scale: 1,
         rotation: 360,
-        duration: 1,
+        duration: 1.2,
         ease: "power2.inOut",
         yoyo: true,
         repeat: -1,
-        repeatDelay: 1.15,
+        repeatDelay: 1,
     }
     
 );
@@ -98,7 +98,7 @@ gsap.from(headerTitles, {
     ease: "power4.out",
     yoyo: true,
     repeat: -1,
-    repeatDelay: 0.5,
+    repeatDelay: 0.7,
 });
 
 // Breakline animation
@@ -110,6 +110,6 @@ gsap.from(headerBreakline, {
     opacity: 0,
     x: 80,
     duration: 1,
-    stagger: 0.3,
     ease: "power4.out",
 });
+

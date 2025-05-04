@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// BURGER MENU
+// ------- NAVIGATION -------
 
 const menu = document.querySelector(".nav__mb");
 const menuButton = document.querySelector(".menu--btn");
@@ -61,7 +61,7 @@ menuButton.addEventListener("click", function () {
 });
 
 
-// HEADER
+//  ------- HEADER -------
 
 // Star animation 
 
@@ -112,4 +112,6 @@ gsap.from(headerBreakline, {
     duration: 1,
     ease: "power4.out",
 });
+
+// ------- MAIN -------
 

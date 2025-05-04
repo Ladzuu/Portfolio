@@ -18,8 +18,8 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, var(--primary-color) 0%, var(--background-color-bottom) 100%);
     filter: blur(50px);
@@ -39,6 +39,7 @@ body {
     height: 80px;
     border-bottom: 1px solid var(--primary-color);
     background-color: var(--background-color-top);
+    z-index: 11;
 }
 
 .menu--btn{
@@ -52,6 +53,7 @@ body {
     color: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 99;
 }
 
 .menu--btn i {
@@ -363,6 +365,7 @@ main {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 160px;
 
         .project {
 
@@ -400,11 +403,125 @@ main {
             }
 
             .card {
-                
+                width: 280px;
+                height: 400px;
+                margin-bottom: 80px;
+                background-color: var(--background-color-top);
+                border-radius: 15px;
+                cursor : pointer;
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                filter: grayscale(100%);
+                z-index: -1;
+                transition: all 0.3s ease;
+
+                img {
+                    padding: 5px;
+                    margin: auto;
+                    width: 260px;
+                    height: 380px;
+                    border-radius: 15px;
+                    object-fit: cover;
+                    border: 4px solid gray;
+                    z-index: -1;
+                }
             }
 
+            .card--janus {
+                transform: scale(1) rotate(-1.5deg);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.08) rotate(0deg);
+                }
+            }
+
+            .card--dataplay {
+                transform: scale(1) rotate(2deg);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.08) rotate(0deg);
+                }
+            }
+
+            .card--designfiction {
+                transform: scale(1) rotate(-3deg);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.08) rotate(0deg);
+                }
+            }
+
+            .card:hover {
+                filter: grayscale(0%);
+                background-color: var(--secondary-color);
+                transform: scale(1.08), rotate(0deg);
+            }
+
+            img:hover {
+                border: 4px solid var(--primary-color);
+            }
         }
-        
     }
 }
 
+/* FOOTER */
+
+.page--breakline {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    bottom: 80px;
+    padding: 0 20px; 
+    z-index: -1;
+
+    img {
+        width: 40px;
+        height: auto;
+    }
+
+    .breakline {
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 19px 0 0 15px;
+    }
+}
+
+.credits {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 40px 0;
+
+    .text--footer {
+        font-family: var(--text);
+        font-size: var(--text-small-mb);
+        font-weight: var(--regular-weight);
+        line-height: var(--text-line-height);
+        margin: 0;
+        padding: 0 0 32px 0;
+        color: var(--primary-color);
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-family: var(--text);
+        font-size: var(--text-small-mb);
+        font-weight: var(--regular-weight);
+        line-height: var(--text-line-height);
+        margin: 0;
+        padding: 0 0 32px 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    }
+}

@@ -101,7 +101,7 @@ gsap.from(headerTitles, {
     repeatDelay: 0.7,
 });
 
-// Breakline animation
+// Breakline
 
 const headerBreakline = document.querySelectorAll(".page--breakline");
 
@@ -112,6 +112,3 @@ gsap.from(headerBreakline, {
     duration: 1,
     ease: "power4.out",
 });
-
-// ------- MAIN -------
-

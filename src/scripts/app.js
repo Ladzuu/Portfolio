@@ -65,7 +65,7 @@ menuButton.addEventListener("click", function () {
 
 // Star animation 
 
-const headerImage = document.querySelector(".header__content img");
+const headerImage = document.querySelector(".header__text img");
 
 gsap.fromTo(headerImage, 
     {

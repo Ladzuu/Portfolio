@@ -1,14 +1,16 @@
 // Clash Display
 @font-face {
-    font-family: 'Clash Display';
-    src: url(assets/fonts/ClashDisplay-VariableFont_wght.ttf) format('truetype');
+    font-family: "Clash Display";
+    src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2");
 }
+  
 
 // Boska
 @font-face {
-    font-family: 'Boska';
-    src: url(assets/fonts/Boska.ttf) format('truetype');
+    font-family: "Boska";
+    src: url("../fonts/Boska-Variable.woff2") format("woff2"), url("../fonts/Boska-VariableItalic.woff2") format("woff2");
 }
+
 
 // Outfit
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');

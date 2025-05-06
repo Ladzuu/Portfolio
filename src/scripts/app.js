@@ -61,7 +61,7 @@ menuButton.addEventListener("click", function () {
 });
 
 
-//  ------- HEADER -------
+//  ------- HEADER HOME -------
 
 // Star animation 
 

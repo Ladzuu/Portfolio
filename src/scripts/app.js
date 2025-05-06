@@ -12,7 +12,7 @@ const menuButton = document.querySelector(".menu--btn");
 menuButton.addEventListener("click", function () {
     const menuLinks = document.querySelectorAll(".nav__list .nav__link");
 
-    // Ajout de la classe "open" pour le bouton
+    // Ajout de la classe "open" sur le bouton
     menuButton.classList.toggle("open");
 
     if (menu.classList.contains("open")) {

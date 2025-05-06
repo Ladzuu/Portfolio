@@ -1,14 +1,25 @@
-// Clash Display
-@font-face {
-    font-family: "Clash Display";
-    src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2");
-}
-  
-
 // Boska
 @font-face {
     font-family: "Boska";
-    src: url("../fonts/Boska-Variable.woff2") format("woff2"), url("../fonts/Boska-VariableItalic.woff2") format("woff2");
+    src: url("../assets/fonts/Boska-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: "Boska";
+    src: url("../assets/fonts/Boska-BlackItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+
+// Boska
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url("../assets/fonts/ClashDisplay-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
 }
 
 

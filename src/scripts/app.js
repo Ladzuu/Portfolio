@@ -12,27 +12,23 @@ const menuButton = document.querySelector(".menu--btn");
 menuButton.addEventListener("click", function () {
     const menuLinks = document.querySelectorAll(".nav__list .nav__link");
 
-    // Ajout de la classe "open" sur le bouton
     menuButton.classList.toggle("open");
 
     if (menu.classList.contains("open")) {
-        // Fermer le menu
         gsap.to(menuLinks, {
             opacity: 0,
             duration: 0.2,
-            stagger: { each: 0.1, from: "end" }, // Animation du dernier au premier
+            stagger: { each: 0.2, from: "end" },
             onComplete: function () {
-                // Une fois les liens disparus, fermeture du menu
                 gsap.to(menu, {
                     y: "-100%",
-                    duration: 0.5,
-                    ease: "power2.in",
+                    duration: 0.2,
+                    ease: "power3.out",
                 });
                 menu.classList.remove("open");
             },
         });
     } else {
-        // Ouvrir le menu
         gsap.fromTo(
             menu,
             { y: "-100%" },
@@ -41,13 +37,11 @@ menuButton.addEventListener("click", function () {
                 duration: 0.5,
                 ease: "power4.out",
                 onComplete: function () {
-                    // Animation des liens
-                    gsap.fromTo(
+                    gsap.to(
                         menuLinks,
-                        { opacity: 0 },
                         {
                             opacity: 1,
-                            duration: 0.5,
+                            duration: 0.4,
                             stagger: 0.2,
                             ease: "power2.out",
                         }
@@ -65,7 +59,7 @@ menuButton.addEventListener("click", function () {
 
 // Star animation 
 
-const headerImage = document.querySelector(".header__text img");
+const headerImage = document.querySelector(".header__text .star--header");
 
 gsap.fromTo(headerImage, 
     {

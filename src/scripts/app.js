@@ -172,13 +172,15 @@ headerBreaklines.forEach(function (breakline) {
 
 //  ------- MAIN HOME -------
 
+// About
+
 const homeAbout = document.querySelector(".section--about");
 
 gsap.fromTo(
     homeAbout,
     {
         opacity: 0,
-        x: -160,
+        x: -80,
     },
     {
         opacity: 1,
@@ -194,4 +196,54 @@ gsap.fromTo(
         
     }
 
+);
+
+// Projects Intro
+
+const homeProjects = document.querySelector(".section--projects__intro");
+
+gsap.fromTo(
+    homeProjects,
+    {
+        opacity: 0,
+        y: -160,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 1,
+        scrollTrigger: {
+            trigger: ".section--projects__intro",
+            start: "top 50%",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);
+
+// Cards
+
+const homeCards = document.querySelectorAll(".section--projects__content .project");
+
+gsap.fromTo(
+    homeCards, 
+    {
+        opacity: 0,
+        y: 160,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".section--projects__content",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+        },
+    }
+    
 );

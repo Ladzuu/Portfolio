@@ -12,7 +12,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    cursor: none;
 }
+
+// Light Center
 
 .highlight--gradient {
     position: fixed;
@@ -28,6 +31,32 @@ body {
     pointer-events: none;
     z-index: -1;
 }
+
+// Custom Cursor
+
+.custom--cursor {
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+.cursor--outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease;
+}
+
 
 /* ------- HOME PAGE ------- */
 
@@ -45,8 +74,8 @@ body {
     background: transparent;
     color: transparent;
     border: 0;
-    cursor: pointer;
     z-index: 99;
+    cursor: none;
 
     i {
         display: block;
@@ -159,6 +188,7 @@ body {
 
             .nav__link:hover {
                 color: var(--secondary-color);
+                cursor: none;
             }
 
             &:last-child {
@@ -318,8 +348,8 @@ body {
             border-radius: 10px;
             border: 1px solid var(--background-menu);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
             transition: all 0.3s ease;
+            cursor: none;
 
             .star--about {
                 width: 20px;
@@ -429,7 +459,6 @@ body {
                 margin-bottom: 80px;
                 background-color: var(--background-color-top);
                 border-radius: 15px;
-                cursor : pointer;
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
                 filter: grayscale(100%);
                 z-index: -1;
@@ -444,12 +473,14 @@ body {
                     object-fit: cover;
                     border: 4px solid gray;
                     z-index: -1;
+                    cursor: none;
                 }
             }
 
             .card--janus {
                 transform: scale(1) rotate(-3deg);
                 transition: all 0.3s ease;
+                cursor: none;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -459,6 +490,7 @@ body {
             .card--dataplay {
                 transform: scale(1) rotate(3deg);
                 transition: all 0.3s ease;
+                cursor: none;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -468,6 +500,7 @@ body {
             .card--designfiction {
                 transform: scale(1) rotate(-4deg);
                 transition: all 0.3s ease;
+                cursor: none;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -539,6 +572,7 @@ body {
         margin: 0;
         padding: 0 0 32px 0;
         transition: all 0.3s ease;
+        cursor: none;
 
         &:hover {
             color: var(--secondary-color);
@@ -625,8 +659,8 @@ body {
             border-radius: 10px;
             border: 1px solid var(--background-menu);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
             transition: all 0.3s ease;
+            cursor: none;
 
             .star--about {
                 width: 20px;

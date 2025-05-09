@@ -4,6 +4,42 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// ------- CUSTOM CURSOR -------
+
+const cursor = document.querySelector('.custom--cursor');      // Cursor
+const outline = document.querySelector('.cursor--outline');    // Border Follow
+
+let mouseX = 0, mouseY = 0;             // Coord Cursor
+let outlineX = 0, outlineY = 0;         // Coord Border
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  // Cursor Mouvements
+  cursor.style.left = `${mouseX}px`;
+  cursor.style.top = `${mouseY}px`;
+});
+
+// Easing function
+function animate() {
+  // Ease (10%)
+  outlineX += (mouseX - outlineX) * 0.1;
+  outlineY += (mouseY - outlineY) * 0.1;
+
+  // Apply new coords
+  outline.style.left = `${outlineX}px`;
+  outline.style.top = `${outlineY}px`;
+
+  // New Frame request
+  requestAnimationFrame(animate);
+}
+
+// Start Anim
+animate();
+
+
+
 // ------- NAVIGATION -------
 
 const menu = document.querySelector(".nav__mb");
@@ -61,7 +97,8 @@ menuButton.addEventListener("click", function () {
 
 const headerImage = document.querySelector(".header__text .star--header");
 
-gsap.fromTo(headerImage, 
+gsap.fromTo(
+    headerImage, 
     {
         opacity: 0,
         scale: 0,
@@ -71,11 +108,11 @@ gsap.fromTo(headerImage,
         opacity: 1,
         scale: 1,
         rotation: 360,
-        duration: 1.2,
+        duration: 1,
         ease: "power2.inOut",
         yoyo: true,
         repeat: -1,
-        repeatDelay: 1,
+        repeatDelay: 0.5,
     }
     
 );
@@ -84,25 +121,77 @@ gsap.fromTo(headerImage,
 
 const headerTitles = document.querySelectorAll(".header__content .title");
 
-gsap.from(headerTitles, {
-    opacity: 0,
-    x: 20,
-    duration: 1,
-    stagger: 0.3,
-    ease: "power4.out",
-    yoyo: true,
-    repeat: -1,
-    repeatDelay: 0.7,
-});
+gsap.fromTo(
+    headerTitles, 
+    {
+        opacity: 0,
+        x: 20,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".header__content",
+            start: "top 80%",
+            end: "50% top",
+            toggleActions: "play reverse play reverse",
+        },
+    }
+    
+);
 
 // Breakline
 
-const headerBreakline = document.querySelectorAll(".page--breakline");
+const headerBreaklines = document.querySelectorAll(".page--breakline");
 
-gsap.from(headerBreakline, {
-    delay: 1,
-    opacity: 0,
-    x: 80,
-    duration: 1,
-    ease: "power4.out",
+headerBreaklines.forEach(function (breakline) {
+    gsap.fromTo(
+        breakline,
+        {
+            opacity: 0,
+            x: 80,
+        },
+        {
+            delay: 0.2,
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: breakline,
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play reverse play reverse",
+            },
+        }
+    );
 });
+
+//  ------- MAIN HOME -------
+
+const homeAbout = document.querySelector(".section--about");
+
+gsap.fromTo(
+    homeAbout,
+    {
+        opacity: 0,
+        x: -160,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: 1,
+        scrollTrigger: {
+            trigger: ".section--about",
+            start: "top 80%",
+            end: "80% top",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);

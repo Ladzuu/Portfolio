@@ -91,7 +91,7 @@ menuButton.addEventListener("click", function () {
 });
 
 
-//  ------- HEADER HOME -------
+// ------- HEADER HOME -------
 
 // Star animation 
 
@@ -170,7 +170,7 @@ headerBreaklines.forEach(function (breakline) {
     );
 });
 
-//  ------- MAIN HOME -------
+// ------- MAIN HOME -------
 
 // About
 
@@ -243,6 +243,31 @@ gsap.fromTo(
             trigger: ".section--projects__content",
             start: "top 80%",
             toggleActions: "play reverse play reverse",
+        },
+    }
+    
+);
+
+// ------- CASE STUDIES HOME -------
+
+const csContent = document.querySelectorAll(".section--content .cs__anim");
+
+gsap.fromTo(
+    csContent, 
+    {
+        opacity: 0,
+        x: 160,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".section--content",
+            start: "top 80%",
+            toggleActions: "play none play reverse",
         },
     }
     

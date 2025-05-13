@@ -3,6 +3,11 @@
 
 // Assets
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
     background-attachment: fixed;
@@ -10,8 +15,6 @@ body {
     background-size: cover;
     color: var(--primary-color);
     margin: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
     cursor: none;
 }
 
@@ -67,7 +70,7 @@ body {
 .menu--btn{
     width: 25px;
     height: 20px;
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 25px;
     z-index: 10;
@@ -106,6 +109,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     position: fixed;
     height: 80px;
     border-bottom: 1px solid var(--primary-color);
@@ -159,7 +163,6 @@ body {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 0;
     transition: all 0.3s ease-out; 
     z-index: 10;
 
@@ -274,6 +277,7 @@ body {
     }
 
     .page--breakline {
+        max-width: calc(100vw - 10%);
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -523,6 +527,7 @@ body {
 /* FOOTER */
 
 .page--breakline {
+    max-width: calc(100vw - 10%);
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -681,6 +686,7 @@ body {
     }
 
     .page--breakline {
+        max-width: calc(100vw - 10%);
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -781,6 +787,7 @@ body {
         }
 
         .page--breakline {
+            max-width: calc(100vw - 10%);
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -1065,6 +1072,49 @@ body {
 /* Desktop */
 
 @media (min-width: 1024px) {
+
+    .nav {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        
+
+        .menu--btn {
+            display: none;
+
+        }
+
+        .nav__mb {
+            top: 0;
+            height: 80px;
+            transform: none;
+            display: flex;
+            align-items: flex-end;
+            background-color: transparent;
+
+            .nav__list {
+                flex-direction: row;
+                gap: 40px;
+                padding-right: 40px;
+
+                .nav__item {
+                    margin-bottom: 0;
+
+                    .nav__link {
+                        font-size: var(--text-size-dt);
+                        line-height: var(--text-line-height);
+                        font-weight: var(--regular-weight);
+                        text-decoration: none;
+                        font-family: var(--h1-cs);
+                        transition: all 0.3s ease;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    
 
     .section--header {
         .header__text {

@@ -152,12 +152,12 @@ headerBreaklines.forEach(function (breakline) {
         breakline,
         {
             opacity: 0,
-            x: 80,
+            width: 0,
         },
         {
             delay: 0.2,
             opacity: 1,
-            x: 0,
+            width: "100%",
             duration: 1,
             ease: "power4.out",
             scrollTrigger: {
@@ -250,25 +250,25 @@ gsap.fromTo(
 
 // ------- CASE STUDIES HOME -------
 
-const csContent = document.querySelectorAll(".section--content .cs__anim");
+// const csContent = document.querySelectorAll(".section--content .cs__anim");
 
-gsap.fromTo(
-    csContent, 
-    {
-        opacity: 0,
-        x: 160,
-    },
-    {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".section--content",
-            start: "top 80%",
-            toggleActions: "play none play reverse",
-        },
-    }
+// gsap.fromTo(
+//     csContent, 
+//     {
+//         opacity: 0,
+//         x: 160,
+//     },
+//     {
+//         opacity: 1,
+//         x: 0,
+//         duration: 1,
+//         stagger: 0.3,
+//         ease: "power4.out",
+//         scrollTrigger: {
+//             trigger: ".section--content",
+//             start: "top 80%",
+//             toggleActions: "play none play reverse",
+//         },
+//     }
     
-);
+// );

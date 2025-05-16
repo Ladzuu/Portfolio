@@ -155,7 +155,7 @@ headerBreaklines.forEach(function (breakline) {
             width: 0,
         },
         {
-            delay: 0.2,
+            delay: 0.4,
             opacity: 1,
             width: "100%",
             duration: 1,
@@ -215,7 +215,7 @@ gsap.fromTo(
         ease: 1,
         scrollTrigger: {
             trigger: ".section--projects__intro",
-            start: "top 50%",
+            start: "top 90%",
             toggleActions: "play reverse play reverse",
         },
         
@@ -248,27 +248,5 @@ gsap.fromTo(
     
 );
 
-// ------- CASE STUDIES HOME -------
+// ------- CASE STUDIES -------
 
-// const csContent = document.querySelectorAll(".section--content .cs__anim");
-
-// gsap.fromTo(
-//     csContent, 
-//     {
-//         opacity: 0,
-//         x: 160,
-//     },
-//     {
-//         opacity: 1,
-//         x: 0,
-//         duration: 1,
-//         stagger: 0.3,
-//         ease: "power4.out",
-//         scrollTrigger: {
-//             trigger: ".section--content",
-//             start: "top 80%",
-//             toggleActions: "play none play reverse",
-//         },
-//     }
-    
-// );

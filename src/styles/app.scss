@@ -15,7 +15,6 @@ body {
     background-size: cover;
     color: var(--primary-color);
     margin: 0;
-    cursor: none;
 }
 
 // Light Center
@@ -38,24 +37,11 @@ body {
 // Custom Cursor
 
 .custom--cursor {
-    width: 25px;
-    height: 25px;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
+    display: none;
 }
 
 .cursor--outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: transform 0.1s ease;
+    display: none;
 }
 
 
@@ -76,7 +62,7 @@ body {
     color: transparent;
     border: 0;
     z-index: 99;
-    cursor: none;
+    cursor: pointer;
 
     i {
         display: block;
@@ -185,7 +171,7 @@ body {
                 font-family: var(--h1-cs);
                 transition: all 0.3s ease;
                 opacity: 0;
-                cursor: none;
+                cursor: pointer;
             }
 
             .nav__link:hover {
@@ -351,7 +337,7 @@ body {
             border: 1px solid var(--background-menu);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease;
-            cursor: none;
+            cursor: pointer;
 
             .star--about {
                 width: 20px;
@@ -475,7 +461,7 @@ body {
                     object-fit: cover;
                     border: 4px solid gray;
                     z-index: -1;
-                    cursor: none;
+                    cursor: pointer;
                 }
             }
 
@@ -575,7 +561,7 @@ body {
         margin: 0;
         padding: 0 0 32px 0;
         transition: all 0.3s ease;
-        cursor: none;
+        cursor: pointer;
 
         &:hover {
             color: var(--secondary-color);
@@ -663,7 +649,7 @@ body {
             border: 1px solid var(--background-menu);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease;
-            cursor: none;
+            cursor: pointer;
 
             .star--about {
                 width: 20px;
@@ -914,14 +900,14 @@ body {
                     object-fit: cover;
                     border: 4px solid gray;
                     z-index: -1;
-                    cursor: none;
+                    cursor: pointer;
                 }
             }
 
             .card--janus {
                 transform: scale(1) rotate(-3deg);
                 transition: all 0.3s ease;
-                cursor: none;
+                cursor: pointer;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -931,7 +917,7 @@ body {
             .card--dataplay {
                 transform: scale(1) rotate(3deg);
                 transition: all 0.3s ease;
-                cursor: none;
+                cursor: pointer;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -941,7 +927,7 @@ body {
             .card--designfiction {
                 transform: scale(1) rotate(-4deg);
                 transition: all 0.3s ease;
-                cursor: none;
+                cursor: pointer;
 
                 &:hover {
                     transform: scale(1.08) rotate(0deg);
@@ -985,7 +971,7 @@ body {
             border: 1px solid var(--background-menu);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease;
-            cursor: none;
+            cursor: pointer;
 
             .star--about {
                 width: 20px;
@@ -1267,6 +1253,35 @@ body {
 
 @media (min-width: 1024px) {
 
+    body {
+        cursor: none;
+    }
+
+    // Custom Cursor
+
+    .custom--cursor {
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: fixed;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+    }
+
+    .cursor--outline {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        transition: transform 0.1s ease;
+    }
+
     .nav {
         background-color: transparent;
         border: none;
@@ -1302,6 +1317,7 @@ body {
                         font-family: var(--h1-cs);
                         transition: all 0.3s ease;
                         opacity: 1;
+                        cursor: none;
                     }
                 }
             }
@@ -1355,6 +1371,7 @@ body {
                 padding: 10px 40px 10px 30px;
                 gap: 30px;
                 font-size: var(--text-size-dt);
+                cursor: none;
 
                 .star--about {
                     width: 25px;
@@ -1396,9 +1413,20 @@ body {
                         padding: 0 0 32px 0;
                     }
                 }
+
                 .text {
                     font-size: var(--text-size-dt);
                     padding: 0 0 80px 0;
+                }
+
+                .card {
+
+                    a {
+
+                        img {
+                            cursor: none;
+                        }
+                    }
                 }
             }
         }
@@ -1410,6 +1438,13 @@ body {
             flex-direction: row;
             gap: 80px;
             padding: 0;
+
+            .text--footer {
+                
+                a {
+                    cursor: none;
+                }
+            }
         }
     }
 
@@ -1440,6 +1475,7 @@ body {
                     padding: 10px 40px 10px 30px;
                     gap: 30px;
                     font-size: var(--text-size-dt);
+                    cursor: none;
     
                     .star--about {
                         width: 25px;
@@ -1494,6 +1530,7 @@ body {
                 padding: 10px 40px 10px 30px;
                 gap: 30px;
                 font-size: var(--text-size-dt);
+                cursor: none;
     
                 .star--about {
                     width: 25px;

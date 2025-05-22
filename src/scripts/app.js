@@ -87,6 +87,26 @@ menuButton.addEventListener("click", function () {
         );
 
         menu.classList.add("open");
+
+        // Close menu when clicking on a link
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                gsap.to(menuLinks, {
+                    opacity: 0,
+                    duration: 0.2,
+                    stagger: { each: 0.2, from: "end" },
+                    onComplete: function () {
+                        gsap.to(menu, {
+                            y: "-100%",
+                            duration: 0.2,
+                            ease: "power3.out",
+                        });
+                        menu.classList.remove("open");
+                        menuButton.classList.remove("open");
+                    },
+                });
+            });
+        });
     }
 });
 

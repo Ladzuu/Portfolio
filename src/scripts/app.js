@@ -265,8 +265,56 @@ gsap.fromTo(
             toggleActions: "play reverse play reverse",
         },
     }
-    
 );
 
 // ------- CASE STUDIES -------
 
+const caseStudiesSections = document.querySelectorAll(".section--main__cs .section--content");
+
+caseStudiesSections.forEach(section => {
+    gsap.fromTo(
+        section,
+        {
+            opacity: 0,
+            y: 80,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                end: "80% top",
+                toggleActions: "play reverse play reverse",
+            },
+        }
+    );
+});
+
+// ------- CREDITS -------
+
+const creditsSections = document.querySelectorAll(".section--main__cd .section--content");
+
+creditsSections.forEach(section => {
+    gsap.fromTo(
+        section,
+        {
+            opacity: 0,
+            y: 120,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                end: "80% top",
+                toggleActions: "play reverse play reverse",
+            },
+        }
+    );
+});

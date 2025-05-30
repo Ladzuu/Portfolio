@@ -1048,6 +1048,7 @@ body {
 
         .content__intro {
 
+            max-width: 425px;
             margin: 0 0 16px 0;
             
             .title--section {
@@ -1077,6 +1078,8 @@ body {
         }
 
         .content__details {
+            
+            max-width: 425px;
 
             .text {
                 font-family: var(--text);
@@ -1086,6 +1089,16 @@ body {
                 margin: 0;
                 padding: 0 0 24px 0;
                 color: var(--primary-color);
+
+                .links--cd {
+                    text-decoration: none;
+                    color: var(--secondary-color);
+
+                    &:hover {
+                        color: var(--secondary-color);
+                        text-decoration: underline;
+                    }
+                }
             }
 
             .text--highlight {
@@ -1591,5 +1604,4 @@ body {
     .grid__cs {
         gap: 60px;
     }
-    
 }

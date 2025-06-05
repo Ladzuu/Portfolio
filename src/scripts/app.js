@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // ------- CUSTOM CURSOR -------
-
+// Pour le curseur modifié, le script je me suis aidé de l'intelligence artificielle ChatGPT.
 const cursor = document.querySelector('.custom--cursor');      // Cursor
 const outline = document.querySelector('.cursor--outline');    // Border Follow
 
@@ -37,8 +37,6 @@ function animate() {
 
 // Start Anim
 animate();
-
-
 
 // ------- NAVIGATION -------
 

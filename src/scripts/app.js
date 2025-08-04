@@ -265,6 +265,31 @@ gsap.fromTo(
     }
 );
 
+// Projects Intro
+
+const homeOther = document.querySelector(".section--projects__other");
+
+gsap.fromTo(
+    homeOther,
+    {
+        opacity: 0,
+        y: -160,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 1,
+        scrollTrigger: {
+            trigger: ".section--projects__other",
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);
+
 // ------- CASE STUDIES -------
 
 const caseStudiesSections = document.querySelectorAll(".section--main__cs .section--content");

@@ -341,3 +341,101 @@ creditsSections.forEach(section => {
         }
     );
 });
+
+// ------- ABOUT -------
+
+// About Education
+
+const aboutEduc = document.querySelector(".educ__intro");
+
+gsap.fromTo(
+    aboutEduc,
+    {
+        opacity: 0,
+        x: -80,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".educ__intro",
+            start: "top 80%",
+            end: "80% top",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);
+
+const aboutEducTime = document.querySelectorAll(".educ__timeline .timeline__tag");
+
+gsap.fromTo(
+    aboutEducTime,
+    {
+        opacity: 0,
+        x: -80,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        stagger: 0.5,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".educ__timeline",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+        },
+    }
+);
+
+// About Experience
+
+const aboutExp = document.querySelector(".exp__intro");
+
+gsap.fromTo(
+    aboutExp,
+    {
+        opacity: 0,
+        x: -80,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".exp__intro",
+            start: "top 80%",
+            end: "80% top",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);
+
+const aboutExpTime = document.querySelectorAll(".exp__timeline .timeline__tag");
+
+gsap.fromTo(
+    aboutExpTime,
+    {
+        opacity: 0,
+        x: -80,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        stagger: 0.5,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".exp__timeline",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+        },
+    }
+);

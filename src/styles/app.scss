@@ -1099,15 +1099,17 @@ body {
     }
 }
 
+/* ------- ABOUT ------- */
+
 .section--main__about {
     margin: 80px 0 0 0;
     padding: 0 20px;
 
-    .section--about__content {
+    .section--about__educ {
         margin: 0 0 160px 0;
         max-width: 400px;
 
-        .content__intro {
+        .educ__intro {
             .title--section {
                 font-family: var(--title-section);
                 font-size: var(--h3-size-mb);
@@ -1133,7 +1135,7 @@ body {
             }
         }
 
-        .content__timeline {
+        .educ__timeline {
 
 
             .timeline__tag {
@@ -1182,6 +1184,170 @@ body {
                     margin: 0;
                     padding: 0 0 8px 0;
                     color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .section--about__exp {
+        margin: 0 0 160px 0;
+        max-width: 400px;
+
+        .exp__intro {
+            .title--section {
+                font-family: var(--title-section);
+                font-size: var(--h3-size-mb);
+                font-weight: var(--bold-weight);
+                line-height: var(--title-line-height);
+                margin: 0;
+                padding: 0 0 32px 0;
+                color: var(--primary-color);
+
+                .text--highlight {
+                    color: var(--secondary-color);
+                }
+            }
+
+            .text--big {
+                font-family: var(--text);
+                font-size: var(--text-size-big-mb);
+                font-weight: var(--regular-weight);
+                line-height: var(--text-line-height);
+                margin: 0;
+                padding: 0 0 24px 0;
+                color: var(--primary-color);
+            }
+        }
+
+        .exp__timeline {
+
+            .timeline__tag {
+                margin: 40px 0 0 0;
+
+                .title--timeline {
+                    font-family: var(--text);
+                    font-size: var(--text-size-big-mb);
+                    font-weight: var(--bold-weight);
+                    line-height: var(--title-line-height);
+                    margin: 0;
+                    padding: 0 0 16px 0;
+                    color: var(--primary-color);
+
+                    .text--highlight {
+                        color: var(--secondary-color);
+                    }
+                }
+
+                .text--small {
+                    font-family: var(--text);
+                    font-size: var(--text-small-mb);
+                    font-weight: var(--regular-weight);
+                    line-height: var(--text-line-height);
+                    margin: 0;
+                    padding: 0 0 16px 0;
+                    color: var(--primary-color);
+                    font-style: italic;
+                }
+
+                .text--big {
+                    font-family: var(--text);
+                    font-size: var(--text-size-dt);
+                    font-weight: var(--bold-weight);
+                    line-height: var(--text-line-height);
+                    margin: 0;
+                    padding: 0 0 16px 0;
+                    color: var(--primary-color);
+                }
+
+                .text {
+                    font-family: var(--text);
+                    font-size: var(--text-size-mb);
+                    font-weight: var(--regular-weight);
+                    line-height: var(--text-line-height);
+                    margin: 0;
+                    padding: 0 0 8px 0;
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .section--about__skills {
+        margin: 0 0 160px 0;
+
+        .skills__intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .title--section {
+                font-family: var(--title-section);
+                font-size: var(--h3-size-mb);
+                font-weight: var(--bold-weight);
+                line-height: var(--title-line-height);
+                margin: 0;
+                padding: 0 0 32px 0;
+                color: var(--primary-color);
+
+                .text--highlight {
+                    color: var(--secondary-color);
+                }
+            }
+
+            .text--big {
+                font-family: var(--text);
+                font-size: var(--text-size-big-mb);
+                font-weight: var(--regular-weight);
+                line-height: var(--text-line-height);
+                margin: 0;
+                padding: 0 0 24px 0;
+                color: var(--primary-color);
+            }
+        }
+
+        .skills__content {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            .skills__box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                svg {
+                    height: 50px;
+                    width: auto;
+                    padding-bottom: 15px;
+                    fill: var(--primary-color);
+                }
+
+                .text--big {
+                    font-family: var(--text);
+                    font-size: var(--text-size-big-mb);
+                    font-weight: var(--regular-weight);
+                    line-height: var(--text-line-height);
+                    margin: 0;
+                    padding: 0 0 16px 0;
+                    color: var(--primary-color);
+                }
+
+                .skills__level {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    vertical-align: middle;
+
+                    .star__level {
+                        width: 20px;
+                        height: auto;
+                        fill: var(--secondary-color);
+                    }
                 }
             }
         }

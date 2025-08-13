@@ -439,3 +439,51 @@ gsap.fromTo(
         },
     }
 );
+
+// About Skills
+
+const aboutSkills = document.querySelector(".skills__intro");
+
+gsap.fromTo(
+    aboutSkills,
+    {
+        opacity: 0,
+        x: -80,
+    },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".skills__intro",
+            start: "top 80%",
+            end: "80% top",
+            toggleActions: "play reverse play reverse",
+        },
+        
+    }
+
+);
+
+const aboutSkillsLevels = document.querySelectorAll(".skills__content .skills__box");
+
+gsap.fromTo(
+    aboutSkillsLevels,
+    {
+        opacity: 0,
+        y: 80,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".skills__content",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+        },
+    }
+);

@@ -487,3 +487,30 @@ gsap.fromTo(
         },
     }
 );
+
+// ------- OTHER -------
+
+const otherSections = document.querySelectorAll(".section--other__content");
+
+otherSections.forEach(section => {
+  gsap.fromTo(
+    section,
+    {
+      opacity: 0,
+      x: -80,
+    },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom top",
+        toggleActions: "play reverse play reverse",
+      },
+    }
+  );
+});
+

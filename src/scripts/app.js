@@ -5,12 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // ------- CUSTOM CURSOR -------
-// Pour le curseur modifié, le script je me suis aidé de l'intelligence artificielle ChatGPT.
-const cursor = document.querySelector('.custom--cursor');      // Cursor
-const outline = document.querySelector('.cursor--outline');    // Border Follow
+const cursor = document.querySelector('.custom--cursor');
+const outline = document.querySelector('.cursor--outline');
 
-let mouseX = 0, mouseY = 0;             // Coord Cursor
-let outlineX = 0, outlineY = 0;         // Coord Border
+let mouseX = 0, mouseY = 0;
+let outlineX = 0, outlineY = 0;
 
 document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
@@ -130,7 +129,7 @@ gsap.fromTo(
         ease: "power2.inOut",
         yoyo: true,
         repeat: -1,
-        repeatDelay: 0.5,
+        repeatDelay: 0.1,
     }
     
 );

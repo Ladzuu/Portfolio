@@ -2074,6 +2074,14 @@ body {
         .section--projects {
             .section--projects__content {
                 gap: 20%;
+
+                .project {
+                    .project--title {
+                        .title--card {
+                            color: var(--secondary-color);
+                        }
+                    }
+                }
             }
         }
 
